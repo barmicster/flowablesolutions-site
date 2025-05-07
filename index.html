@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowable Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+  // Responsive nav toggle
+  function toggleMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('show');
+  }
+
+  // Smooth close nav on link click and fade-in animation
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.querySelector('nav');
+        if (window.innerWidth <= 768) {
+          nav.classList.remove('show');
+        }
+      });
+    });
+
+    // Scroll-triggered fade-in
+    const faders = document.querySelectorAll('.fade-in');
+    const options = { threshold: 0.1 };
+    const observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    faders.forEach(fader => {
+      observer.observe(fader);
+    });
+  });
+</script>
+</head>
+<script>
+  function showQuoteForm() {
+    const formSection = document.getElementById("quote-form");
+    formSection.style.display = "block";
+    formSection.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function hideQuoteForm() {
+    document.getElementById("quote-form").style.display = "none";
+    document.getElementById("quoteForm").reset();
+    document.getElementById("thankYouMsg").style.display = "none";
+  }
+
+  function submitForm(event) {
+    event.preventDefault(); // prevent default form action
+
+    // OPTIONAL: Use fetch to actually send data (if not using Formspree)
+    // fetch(event.target.action, {
+    //   method: 'POST',
+    //   body: new FormData(event.target)
+    // })
+
+    document.getElementById("thankYouMsg").style.display = "block";
+    document.getElementById("quoteForm").reset();
+
+    // Auto-close after 3 seconds (optional)
+    setTimeout(() => {
+      hideQuoteForm();
+    }, 3000);
+
+    return false;
+  }
+</script>
+<body>
+  <!-- Header Section -->
+  <header class="hero">
+    <div class="brand">
+        <svg width="60" height="110" viewBox="0 0 60 110" xmlns="http://www.w3.org/2000/svg" class="node-logo-svg">
+          <!-- Lines -->
+          <line class="line l1" x1="30" y1="20" x2="10" y2="40" />
+          <line class="line l2" x1="10" y1="40" x2="30" y2="70" />
+          <line class="line l3" x1="30" y1="70" x2="10" y2="90" />
+
+          <!-- Circles -->
+          <circle class="node n1" cx="30" cy="20" r="6" />
+          <circle class="node n2" cx="10" cy="40" r="6" />
+          <circle class="node n3" cx="30" cy="70" r="6" />
+          <circle class="node n4" cx="10" cy="90" r="6" />
+        
+          <!-- Gradient Definition -->
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00dffc" />
+              <stop offset="100%" stop-color="#6a7dff" />
+            </linearGradient>
+          </defs>
+        </svg> 
+        <div class="logo-text">
+          <div class="logo">FLOWABLE <span>SOLUTIONS</span></div>
+          <p class="tagline">Innovation in Motion. Powered by Flow</p>
+        </div>
+      </div>      
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in">
+    <h2>About Us</h2>
+    <p>Flowable Solutions delivers streamlined, user-friendly applications with Power Platform technologies. Founded by Mike Barker, we specialize in solving complex workflows with elegant automation.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="fade-in">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Custom PowerApps Development</li>
+      <li>SharePoint & Dataverse Integration</li>
+      <li>Power Automate Flows & Automation</li>
+      <li>Data-Driven Dashboards with Power BI</li>
+    </ul>
+    <button class="btn" onclick="showQuoteForm()">Request a Quote</button>
+    <section id="quote-form" class="fade-in" style="display: none;">
+      <h2>Request a Quote</h2>
+      <button onclick="hideQuoteForm()" style="float: right; background: transparent; border: none; font-size: 1.2rem; cursor: pointer;">✖</button>
+      <form id="quoteForm" action="https://formspree.io/f/xrbqkqpy" method="POST">
+        <label for="name">Name</label><br />
+        <input type="text" id="name" name="name" required><br /><br />
+    
+        <label for="email">Email</label><br />
+        <input type="email" id="email" name="email" required><br /><br />
+    
+        <label for="details">Project Details</label><br />
+        <textarea id="details" name="details" rows="5" required></textarea><br /><br />
+    
+        <button type="submit" class="btn">Submit Request</button>
+      </form>
+      <p id="thankYouMsg" style="display:none; color: green; font-weight: bold; margin-top: 10px;">
+        Thank you! Your request has been submitted.
+      </p>
+    </section>   
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="fade-in">
+    <h2>Project Highlights</h2>
+    <p>Examples of apps we've delivered for logistics, personnel scheduling, and document automation. More coming soon!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mike@flowablesolutions.com">mike@flowablesolutions.com</a></p>
+    <p>Phone: <a href="tel:+12533061363">(253) 306-1363</a></p>
+    <a class="btn" href="mailto:mike@flowablesolutions.com">Email Us</a>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Flowable Solutions LLC. All rights reserved.</p>
+  </footer>
+</body>
+</html>
