@@ -247,3 +247,63 @@
   #quote-form {
     transition: all 0.4s ease-in-out;
   }  
+/* FLOW Strategy Section */
+#flow-strategy {
+  padding: 60px 20px;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  text-align: center;
+}
+
+#flow-strategy h2 {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#flow-strategy p.subtitle {
+  color: #94a3b8;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.flow-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.flow-item {
+  flex: 1 1 200px;
+  max-width: 240px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flow-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.circle-letter {
+  background: radial-gradient(circle, #1e293b, #0f172a);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  border: 3px solid #334155;
+}
+
+.flow-item h3 {
+  color: #fff;
+}
+
+.flow-item p {
+  color: #cbd5e1;
+}
