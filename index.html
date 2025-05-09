@@ -167,7 +167,7 @@
 </section>
 
   <!-- Services Section -->
-  <section id="services" class="fade-in">
+ <section id="services" class="fade-in">
   <h2>Our Services</h2>
   <div class="service-cards">
     <div class="service-card">
@@ -187,7 +187,29 @@
       <p>Visualize insights and make informed decisions.</p>
     </div>
   </div>
+
   <button class="btn" onclick="showQuoteForm()">Request a Quote</button>
+</section>
+
+<!-- Move this OUTSIDE the #services section -->
+<section id="quote-form" class="fade-in" style="display: none;">
+  <h2>Request a Quote</h2>
+  <button onclick="hideQuoteForm()" style="float: right; background: transparent; border: none; font-size: 1.2rem; cursor: pointer;">✖</button>
+  <form id="quoteForm" action="https://formspree.io/f/xrbqkqpy" method="POST">
+    <label for="name">Name</label><br />
+    <input type="text" id="name" name="name" required><br /><br />
+
+    <label for="email">Email</label><br />
+    <input type="email" id="email" name="email" required><br /><br />
+
+    <label for="details">Project Details</label><br />
+    <textarea id="details" name="details" rows="5" required></textarea><br /><br />
+
+    <button type="submit" class="btn">Submit Request</button>
+  </form>
+  <p id="thankYouMsg" style="display:none; color: green; font-weight: bold; margin-top: 10px;">
+    Thank you! Your request has been submitted.
+  </p>
 </section>
 
   <!-- Portfolio Section -->
