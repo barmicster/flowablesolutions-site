@@ -277,8 +277,8 @@ h2 {
 #flow-strategy {
   width: 100%;
   padding: 60px 0;
-  background-color: linear-gradient(90deg, #1e293b, #38bdf8);
-  color: white;
+  background-color: #0f172a;
+  color: #e2e8f0;
   text-align: center;
 }
 
