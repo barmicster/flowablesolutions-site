@@ -8,8 +8,8 @@
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f1f5f9;
+    color: #1e293b;
     padding: 20px;
   }
   
@@ -19,8 +19,8 @@
   
   /* Header Section */
   .hero {
-    text-align: center;
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
+  text-align: center;
+  background: linear-gradient(to right, #0ea5e9, #06b6d4);
     color: white;
     padding: 40px 20px;
     border-radius: 8px;
@@ -102,22 +102,21 @@
   }
   
   /* Section Styling */
-  section {
-    padding: 40px 20px;
-    margin: 20px 0;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+ section {
+  padding: 40px 20px;
+  margin: 20px 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 1100px;
+  margin-left: auto;
+  margin: auto;
+}
   
   section h2 {
     margin-bottom: 15px;
     color: #2c3e50;
   }
-  section {
-  max-width: 1100px;
-  margin: auto;
-}
 h2 {
   font-size: 2rem;
 }
@@ -259,7 +258,8 @@ h2 {
   }  
 /* FLOW Strategy Section */
 #flow-strategy {
-  padding: 60px 20px;
+  width: 100%;
+  padding: 60px 0;
   background-color: #0f172a;
   color: #e2e8f0;
   text-align: center;
@@ -340,4 +340,10 @@ h2 {
 .service-card p {
   color: #475569;
   font-size: 0.95rem;
+}
+#about p,
+#portfolio p,
+#contact p {
+  color: #334155;
+  font-size: 1rem;
 }
