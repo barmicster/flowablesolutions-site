@@ -413,3 +413,12 @@ h2 {
 .right {
   right: 0;
 }
+.gallery img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
