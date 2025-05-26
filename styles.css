@@ -364,3 +364,52 @@ h2 {
   color: #334155;
   font-size: 1rem;
 }
+.gallery-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+.gallery::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.gallery img {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
