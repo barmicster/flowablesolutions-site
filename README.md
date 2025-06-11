@@ -26,9 +26,7 @@ Flowable Solutions delivers streamlined, user-friendly business applications bui
 ## 📬 Contact
 
 Have a project in mind?  
-📧 Email: [mike@flowablesolutions.com](mailto:mike@flowablesolutions.com)  
-📱 Call: (253) 306-1363
-
+📧 Email: [info@flowablesolutions.com](mailto:info@flowablesolutions.com)  
 ---
 
 ## 🛠 Built With
@@ -37,14 +35,6 @@ Have a project in mind?
 - GitHub Pages for hosting
 - Formspree for form submissions
 - Custom SVG design
-
----
-
-## 👨‍💻 Author
-
-**Mike Barker**  
-Founder, Developer, and Veteran  
-[LinkedIn (optional)](https://linkedin.com/in/michael-barker-mba-812904108)
 
 ---
 
